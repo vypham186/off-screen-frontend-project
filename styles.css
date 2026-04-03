@@ -173,3 +173,38 @@ body, nav, ul, li, section, h1, h2, h3, p, div, button {
     max-width: 1100px;
     margin: auto;
   }
+
+  /*------- Style rules for sign in and log in page ------*/
+  /* ---------- Auth Buttons in Navbar ---------- */
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.signup-btn {
+  text-decoration: none;
+  background-color: white;
+  color: #555;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Hover effects (optional but nice) */
+.login-btn:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.signup-btn:hover {
+  background-color: #ddd;
+}
