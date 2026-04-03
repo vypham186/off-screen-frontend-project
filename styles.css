@@ -150,3 +150,23 @@ body, nav, ul, li, section, h1, h2, h3, p, div, button {
     font-weight: bold;
     text-align: left;
   }
+  
+  /* ---------- Style rules for community section ---------- */
+  .community-placeholder {
+    height: 120px;
+    background-color: #dcdcdc;
+    border-radius: 12px;
+    margin: 30px 0;
+  }
+  
+  /* ---------- Style rules for footer ---------- */
+  footer {
+    background-color: #555;
+    color: white;
+    padding: 50px 20px;
+  }
+  
+  .footer-content {
+    max-width: 1100px;
+    margin: auto;
+  }
