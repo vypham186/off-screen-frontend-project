@@ -1,13 +1,13 @@
-const loginTab = document.getElementById("loginTab") as HTMLButtonElement | null;
-const signupTab = document.getElementById("signupTab") as HTMLButtonElement | null;
+const loginTab = document.getElementById("loginTab");
+const signupTab = document.getElementById("signupTab");
 
-const loginForm = document.getElementById("loginForm") as HTMLFormElement | null;
-const signupForm = document.getElementById("signupForm") as HTMLFormElement | null;
+const loginForm = document.getElementById("loginForm");
+const signupForm = document.getElementById("signupForm");
 
-const goSignup = document.getElementById("goSignup") as HTMLSpanElement | null;
-const goLogin = document.getElementById("goLogin") as HTMLSpanElement | null;
+const goSignup = document.getElementById("goSignup");
+const goLogin = document.getElementById("goLogin");
 
-const message = document.getElementById("message") as HTMLDivElement | null;
+const message = document.getElementById("message");
 
 function showLogin(): void {
   if (!loginTab || !signupTab || !loginForm || !signupForm || !message) return;
@@ -50,14 +50,14 @@ if (goLogin) {
 }
 
 if (loginForm && message) {
-  loginForm.addEventListener("submit", (event: Event) => {
+  loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
     message.textContent = "Logged in successfully!";
   });
 }
 
 if (signupForm && message) {
-  signupForm.addEventListener("submit", (event: Event) => {
+  signupForm.addEventListener("submit", function (event) {
     event.preventDefault();
     message.textContent = "Account created successfully!";
   });
