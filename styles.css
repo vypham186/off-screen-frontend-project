@@ -1,0 +1,152 @@
+ /*
+  Author: OffScreen
+  Date: April, 2026
+  File Name: styles.css
+  */
+
+/* CSS Reset */
+body, nav, ul, li, section, h1, h2, h3, p, div, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  /* Style rule for box sizing applies to all elements */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* ---------- Style rules for body ---------- */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f3ef;
+    color: #222;
+    line-height: 1.6;
+  }
+  
+  /* ---------- Style rules for headings ---------- */
+  h1, h2, h3 {
+    margin-top: 0;
+  }
+  
+  /* ---------- Style rules for container ---------- */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  /* ---------- Style rules for buttons ---------- */
+  button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #bdbdbd;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* ---------- Style rules for navigation ---------- */
+  .navbar {
+    background-color: #555;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .signin {
+    background-color: #777;
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  
+  /* ---------- Style rules for hero section ---------- */
+  .hero {
+    background-color: #f1f1ee;
+    padding: 80px 20px;
+  }
+  
+  .button-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* ---------- Style rules for cards ---------- */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+  }
+  
+  .image-placeholder {
+    height: 120px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* ---------- Style rules for icons ---------- */
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .icon {
+    width: 80px;
+    height: 80px;
+    background-color: #d6d6d6;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+  }
+  
+  /* ---------- Style rules for explore section ---------- */
+  .explore {
+    background-color: #666;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  /* ---------- Style rules for quiz section ---------- */
+  .quiz {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .quiz-box {
+    background-color: #777;
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+  }
