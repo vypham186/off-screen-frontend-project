@@ -174,7 +174,6 @@ body, nav, ul, li, section, h1, h2, h3, p, div, button {
     margin: auto;
   }
 
-  /*------- Style rules for sign in and log in page ------*/
   /* ---------- Auth Buttons in Navbar ---------- */
 
 .auth-buttons {
@@ -200,11 +199,168 @@ body, nav, ul, li, section, h1, h2, h3, p, div, button {
   font-size: 14px;
 }
 
-/* Hover effects (optional but nice) */
+/* ---- Add hover effects ---- */
 .login-btn:hover {
   background-color: rgba(255,255,255,0.1);
 }
 
 .signup-btn:hover {
   background-color: #ddd;
+}
+
+/* ---------- LOGIN PAGE (FIGMA STYLE) ---------- */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 60px 20px;
+  background-color: #f4f3ef;
+  flex-direction: column;
+  text-align: center;
+}
+
+.auth-container h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #2c2a28;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* Card */
+.auth-box {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  background-color: #f7f5f1;
+  padding: 6px;
+  border-radius: 999px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabs button {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: #7d7d7d;
+  cursor: pointer;
+  padding: 10px 22px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.tabs button:hover {
+  background-color: #ebe7e0;
+  color: #2c2a28;
+}
+
+.tabs button.active {
+  background-color: #ffffff;
+  color: #2c2a28;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Forms */
+.form {
+  display: none;
+  text-align: left;
+}
+
+.active-form {
+  display: block;
+}
+
+/* Labels */
+.form label {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Inputs */
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fafafa;
+}
+
+/* Primary Button */
+.form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6ea7a6;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #5c9291;
+}
+
+/* Small text */
+.switch {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #777;
+}
+
+.switch span {
+  color: #6ea7a6;
+  cursor: pointer;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Social buttons */
+.social-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  margin-bottom: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Message */
+#message {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #2f6f4f;
+  text-align: center;
 }
