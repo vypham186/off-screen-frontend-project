@@ -72,6 +72,9 @@ body, nav, ul, li, section, h1, h2, h3, p, div, button {
     background-color: #777;
     padding: 6px 14px;
     border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
   }
   
   /* ---------- Style rules for hero section ---------- */
