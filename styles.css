@@ -764,3 +764,279 @@ body, nav, ul, li, section, h1, h2, h3, p, div, button {
     order: 1;
   }
 }
+
+/* ---------- Style rules for explore hero section ---------- */
+
+.explore-hero {
+  background-color: #f1f1ee;
+  padding: 80px 20px 70px;
+  text-align: center;
+}
+
+.explore-hero h1 {
+  font-size: 2.2rem;
+  color: #2c2a28;
+  margin-bottom: 12px;
+}
+
+.explore-hero p {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+.explore-search-bar {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #ddd8cf;
+  border-radius: 24px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.explore-search-bar input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.search-icon {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* explore page layout */
+
+.explore-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* filters sidebar */
+
+.explore-filters {
+  background-color: #f7f5f1;
+  border: 1px solid #e4dfd7;
+  border-radius: 12px;
+  padding: 24px 20px;
+  position: sticky;
+  top: 20px;
+}
+
+.explore-filters h3 {
+  font-size: 1.1rem;
+  color: #2c2a28;
+  margin-bottom: 14px;
+}
+
+.explore-filters hr {
+  border: none;
+  border-top: 1px solid #e4dfd7;
+  margin: 16px 0;
+}
+
+.filter-group {
+  margin-bottom: 6px;
+}
+
+.filter-group h4 {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.filter-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #444;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] {
+  accent-color: #6ea7a6;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: auto;
+}
+
+.dot-beginner     { background-color: #d4813a; }
+.dot-intermediate { background-color: #4a8a5a; }
+.dot-advanced     { background-color: #c0392b; }
+
+.cost-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cost-label {
+  font-size: 0.82rem;
+  color: #777;
+}
+
+.cost-slider {
+  width: 100%;
+  accent-color: #6ea7a6;
+  cursor: pointer;
+}
+
+/* explore hobby grid */
+
+.explore-results {
+  min-width: 0;
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.hobby-card {
+  background-color: #ffffff;
+  border: 1px solid #e4dfd7;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hobby-img-placeholder {
+  width: 100%;
+  height: 160px;
+  background-color: #dcd8d2;
+}
+
+.hobby-card-body {
+  padding: 16px 18px 18px;
+}
+
+.hobby-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.hobby-tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: #777;
+}
+
+.tag-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #b0aaa3;
+  display: inline-block;
+}
+
+.tag-dot-light {
+  background-color: #ccc8c2;
+}
+
+.hobby-card-body h3 {
+  font-size: 1.05rem;
+  color: #2c2a28;
+  margin-bottom: 6px;
+}
+
+.hobby-card-body p {
+  font-size: 0.85rem;
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.hobby-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hobby-time {
+  font-size: 0.8rem;
+  color: #888;
+  background-color: #f4f2ef;
+  border-radius: 6px;
+  padding: 6px 10px;
+  display: inline-block;
+}
+
+.hobby-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.difficulty-badge {
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.badge-first-timer  { background-color: #e8e0d0; color: #6b5c3e; }
+.badge-beginner     { background-color: #e8c9a0; color: #7a4e1e; }
+.badge-intermediate { background-color: #d4813a; color: #ffffff; }
+.badge-advanced     { background-color: #b33a2e; color: #ffffff; }
+.badge-expert       { background-color: #7b1e1e; color: #ffffff; }
+
+.cost {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 600;
+}
+.results-heading {
+  font-size: 1.2rem;
+  color: #2c2a28;
+  margin-bottom: 20px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 900px) {
+  .explore-layout {
+    grid-template-columns: 1fr;
+  }
+  .explore-filters {
+    position: static;
+  }
+  .hobby-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hobby-grid {
+    grid-template-columns: 1fr;
+  }
+  .explore-hero h1 {
+    font-size: 1.7rem;
+  }
+}
+
