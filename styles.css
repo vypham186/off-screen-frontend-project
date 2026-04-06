@@ -90,6 +90,12 @@ body, nav, ul, li, section, h1, h2, h3, p, div, button {
   height: 120px;   
   width: auto;
 }
+
+.logo a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
   
   /* ---------- Style rules for hero section ---------- */
   .hero {
