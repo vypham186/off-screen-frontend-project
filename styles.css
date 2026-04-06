@@ -16,6 +16,7 @@ body, nav, ul, li, section, h1, h2, h3, p, div, button {
     box-sizing: border-box;
   }
   
+
   /* ---------- Style rules for body ---------- */
   body {
     font-family: Arial, Helvetica, sans-serif;
@@ -50,7 +51,8 @@ body, nav, ul, li, section, h1, h2, h3, p, div, button {
   .navbar {
     background-color: #555;
     color: white;
-    padding: 15px 30px;
+    height: 70px;
+    padding: 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,6 +78,18 @@ body, nav, ul, li, section, h1, h2, h3, p, div, button {
     color: white;
     display: inline-block;
   }
+
+  /*--- Style rules for logo---*/
+  .logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  height: 120px;   
+  width: auto;
+}
   
   /* ---------- Style rules for hero section ---------- */
   .hero {
@@ -743,3 +757,4 @@ body, nav, ul, li, section, h1, h2, h3, p, div, button {
   .community-main {
     order: 1;
   }
+}
