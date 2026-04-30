@@ -1,8 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Hero.module.css';
 
 function Hero() {
+  const navigate = useNavigate();
+  function handleContactClick() {
+    navigate('/about');
+    setTimeout(() => {
+      const el = document.getElementById('contact-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 300);
+  }
   return (
     <main>
       <section className={styles.hero}>
@@ -92,6 +100,14 @@ function Hero() {
           <strong>Designed for Everyone:</strong> High contrast | Easy-to-read fonts | Captioned tutorials | Keyboard navigation
         </p>
       </section>
+      <button
+        className={styles.floatingBtn}
+        onClick={handleContactClick}
+        aria-label="Contact us"
+      >
+        <span className={styles.floatingIcon}>✉️</span>
+        <span className={styles.floatingLabel}>Contact Us</span>
+      </button>
     </main>
   );
 }

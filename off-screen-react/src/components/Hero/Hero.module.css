@@ -266,3 +266,59 @@
 @media (max-width: 700px) {
   .quizGrid { grid-template-columns: 1fr; }
 }
+
+.floatingBtn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+  height: 52px;
+  width: 52px;
+  border-radius: 999px;
+  background: #2d5a3d;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 16px;
+}
+
+.floatingBtn:hover {
+  width: 148px;
+  background: #c8841a;
+  gap: 8px;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
+}
+
+.floatingIcon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.floatingLabel {
+  font-size: 0.88rem;
+  font-weight: 700;
+  font-family: inherit;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.floatingBtn:hover .floatingLabel {
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .floatingBtn {
+    bottom: 20px;
+    right: 20px;
+  }
+}

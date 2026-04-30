@@ -1,0 +1,250 @@
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 20px 30px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: #2a2a28;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #777777;
+  font-size: 0.95rem;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  color: #2a2a28;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  color: #777777;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.sectionAlt {
+  background: #f7f4ef;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.sectionAlt h2 {
+  font-size: 1.5rem;
+  color: #2a2a28;
+  margin-bottom: 10px;
+}
+
+.sectionAlt p {
+  color: #777777;
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.tutorialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.tutorialCard {
+  background: #ffffff;
+  border: 1px solid #ddd8cf;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.tutorialCard:hover {
+  box-shadow: 0 6px 20px rgba(58,107,122,0.1);
+}
+
+.tutorialImg {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tutorialBody { padding: 18px; }
+
+.tutorialBody h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #2a2a28;
+}
+
+.tutorialBody p {
+  font-size: 0.88rem;
+  color: #777777;
+  margin-bottom: 16px;
+}
+
+.watchBtn {
+  padding: 9px 18px;
+  background: #3a6b7a;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.watchBtn:hover { background: #2e5866; }
+
+.center {
+  text-align: center;
+  margin-top: 22px;
+}
+
+.outlineBtn {
+  padding: 10px 22px;
+  background: transparent;
+  color: #3a6b7a;
+  border: 2px solid #3a6b7a;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.outlineBtn:hover {
+  background: #3a6b7a;
+  color: #ffffff;
+}
+
+.searchBar {
+  max-width: 430px;
+  margin: 0 auto 30px;
+  background: #ffffff;
+  border: 1px solid #ddd8cf;
+  border-radius: 24px;
+  padding: 11px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchBar input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 0.92rem;
+  color: #2a2a28;
+  font-family: inherit;
+}
+
+.storeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.storeCard {
+  text-align: center;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #ddd8cf;
+  border-radius: 12px;
+  transition: box-shadow 0.2s;
+}
+
+.storeCard:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+}
+
+.storeLogo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 14px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.storeCard h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #2a2a28;
+}
+
+.storeCard p {
+  font-size: 0.86rem;
+  color: #777777;
+}
+
+.bundleGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 28px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bundleCard {
+  background: #ffffff;
+  border: 1px solid #ddd8cf;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  text-align: left;
+}
+
+.bundleCard:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+}
+
+.bundleImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.bundleBody { padding: 18px; }
+
+.bundleBody h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #2a2a28;
+}
+
+.bundleBody p {
+  font-size: 0.88rem;
+  color: #777777;
+}
+
+@media (max-width: 900px) {
+  .tutorialGrid { grid-template-columns: 1fr 1fr; }
+  .storeGrid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .tutorialGrid { grid-template-columns: 1fr; }
+  .bundleGrid { grid-template-columns: 1fr; }
+  .storeGrid { grid-template-columns: 1fr 1fr; }
+}

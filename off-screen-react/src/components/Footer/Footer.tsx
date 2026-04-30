@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
+import logo from '../../assets/logo.png';
 
 function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.grid}>
         <div>
-          <h3>Off Screen</h3>
+          <img src={logo} alt="Off Screen Logo" style={{ height: '48px', width: 'auto', marginBottom: '12px', display: 'block' }} />
           <p>Making your time away from screens more meaningful, one hobby at a time.</p>
         </div>
         <div>

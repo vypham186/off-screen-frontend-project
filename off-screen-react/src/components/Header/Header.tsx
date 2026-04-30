@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import logo from '../../assets/logo.png';
 import styles from './Header.module.css';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 80);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.logo}>
-        <Link to="/" className={styles.logoText}>Off Screen</Link>
+        <Link to="/">
+          <img
+            src={logo}
+            alt="Off Screen Logo"
+            className={`${styles.logoImg} ${scrolled ? styles.logoSmall : ''}`}
+          />
+        </Link>
       </div>
 
       <button

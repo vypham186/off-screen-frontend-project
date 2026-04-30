@@ -1,3 +1,5 @@
+import potteryImg from '../assets/pottery_img.avif';
+import watercolorImg from '../assets/watercolor_img.jpg';
 export interface Hobby {
   id: number;
   name: string;
@@ -20,7 +22,7 @@ const hobbies: Hobby[] = [
     timeToLearn: "2-3 weeks",
     difficulty: "Beginner",
     cost: "$$",
-    imageUrl: "https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?auto=format&fit=crop&w=600&q=80"
+    imageUrl: potteryImg
   },
   {
     id: 2,
@@ -64,7 +66,7 @@ const hobbies: Hobby[] = [
     timeToLearn: "1-2 weeks",
     difficulty: "First-Timer",
     cost: "$",
-    imageUrl: "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?auto=format&fit=crop&w=600&q=80"
+    imageUrl: watercolorImg
   },
   {
     id: 6,

@@ -1,7 +1,7 @@
 .navbar {
   background-color: #2d5a3d;
   color: #ffffff;
-  height: 70px;
+  height: 120px;
   padding: 0 30px;
   display: flex;
   justify-content: space-between;
@@ -9,14 +9,30 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: height 0.3s ease, box-shadow 0.3s ease;
 }
 
-.logoText {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #ffffff;
-  text-decoration: none;
-  letter-spacing: 0.02em;
+.scrolled {
+  height: 90px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logoImg {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: height 0.3s ease;
+}
+
+.logoSmall {
+  height: 68px;
 }
 
 .navLinks {
@@ -36,7 +52,11 @@
 }
 
 .navLinks a:hover { color: #ffffff; }
-.active { color: #ffffff !important; font-weight: 700 !important; }
+
+.active {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
 
 .authButtons {
   display: flex;
@@ -99,13 +119,17 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 120px;
     left: 0;
     right: 0;
     background-color: #2d5a3d;
     padding: 20px 30px;
     gap: 16px;
     z-index: 99;
+  }
+
+  .scrolled .navLinks {
+    top: 64px;
   }
 
   .navLinks.open { display: flex; }
