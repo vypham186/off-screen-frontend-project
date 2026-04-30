@@ -1,0 +1,258 @@
+.hero {
+  background: linear-gradient(135deg, #4a5a2b, #2d5a3d);
+  color: #ffffff;
+  padding: 70px 20px 60px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1rem;
+  opacity: 0.85;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 44px 20px 80px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 38px 38px 32px;
+  box-shadow: 0 8px 40px rgba(42,90,43,0.1);
+  border: 1px solid #ddd8cf;
+  margin-bottom: 24px;
+}
+
+.header { margin-bottom: 28px; }
+
+.progressWrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 8px;
+  background: #f7f4ef;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #2d5a3d, #3a6b7a);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.counter {
+  font-size: 0.8rem;
+  color: #777777;
+  white-space: nowrap;
+}
+
+.questionArea {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.emoji {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.questionText {
+  font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+  color: #2a2a28;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.optionBtn {
+  background: #f7f4ef;
+  border: 2px solid #ddd8cf;
+  border-radius: 12px;
+  padding: 15px 14px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #2a2a28;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.18s ease;
+  line-height: 1.4;
+}
+
+.optionBtn:hover:not(:disabled) {
+  background: #d4edda;
+  border-color: #2d5a3d;
+  transform: translateY(-2px);
+}
+
+.optionBtn:disabled { cursor: default; }
+
+.optionSelected {
+  background: #d4edda !important;
+  border-color: #2d5a3d !important;
+  color: #2d5a3d !important;
+  font-weight: 600;
+}
+
+.results { text-align: center; }
+
+.resultsLabel {
+  font-size: 1rem;
+  color: #777777;
+  margin-bottom: 20px;
+}
+
+.resultCard {
+  background: linear-gradient(135deg, #2d5a3d, #3a6b7a);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.resultEmoji {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.resultName {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.resultTagline {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 14px;
+}
+
+.resultDesc {
+  font-size: 0.88rem;
+  opacity: 0.85;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.resultMeta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.resultMeta span {
+  background: rgba(255,255,255,0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.resultsMessage {
+  font-size: 0.95rem;
+  color: #777777;
+  margin-bottom: 24px;
+}
+
+.resultsActions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background: #3a6b7a;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 13px 28px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+.btnPrimary:hover { background: #2e5866; }
+
+.btnSecondary {
+  background: #f7f4ef;
+  color: #3a6b7a;
+  border: 2px solid #3a6b7a;
+  border-radius: 999px;
+  padding: 11px 26px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnSecondary:hover {
+  background: #3a6b7a;
+  color: #ffffff;
+}
+
+.howTo {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 26px 30px;
+  border: 1px solid #ddd8cf;
+}
+
+.howTo h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2a2a28;
+  margin-bottom: 16px;
+}
+
+.howTo ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.howTo li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.87rem;
+  color: #777777;
+}
+
+@media (max-width: 600px) {
+  .card { padding: 24px 18px; }
+  .optionsGrid { grid-template-columns: 1fr; }
+  .howTo ul { grid-template-columns: 1fr; }
+}

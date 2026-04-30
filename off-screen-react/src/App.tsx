@@ -1,29 +1,25 @@
-import Header from "./components/Header/Header";
-
-
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Hero from './components/Hero/Hero';
+import Explore from './components/Explore/Explore';
+import Quiz from './components/Quiz/Quiz';
+import Community from './components/Community/Community';
 
-function Header() {
+function App() {
   return (
-    <nav className="navbar">
-      <div className="logo">LOGO</div>
-
-      <ul className="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="#">Explore Hobbies</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-
-      <div className="auth-buttons">
-        <button className="login-btn">Log In</button>
-        <button className="signup-btn">Sign Up</button>
-      </div>
-    </nav>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/community" element={<Community />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
-export default Header;
+export default App;
