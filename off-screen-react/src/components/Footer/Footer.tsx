@@ -8,9 +8,19 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={styles.grid}>
         <div>
-          <img src={logo} alt="Off Screen Logo" style={{ height: '48px', width: 'auto', marginBottom: '12px', display: 'block' }} />
+          <img
+            src={logo}
+            alt="Off Screen Logo"
+            style={{
+              height: '48px',
+              width: 'auto',
+              marginBottom: '12px',
+              display: 'block'
+            }}
+          />
           <p>Making your time away from screens more meaningful, one hobby at a time.</p>
         </div>
+
         <div>
           <h4>Navigate</h4>
           <Link to="/">Home</Link>
@@ -19,17 +29,20 @@ function Footer() {
           <Link to="/community">Community</Link>
           <Link to="/about">About</Link>
         </div>
+
         <div>
           <h4>Support</h4>
           <a href="#">Accessibility</a>
-          <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
           <a href="#">FAQ</a>
         </div>
+
         <div>
           <h4>Play</h4>
           <Link to="/quiz">🎯 Hobby Quiz</Link>
         </div>
       </div>
+
       <p className={styles.bottom}>
         © 2026 All Rights Reserved | Unplug Corporation Pvt. Ltd.
       </p>
