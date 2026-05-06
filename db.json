@@ -1,0 +1,11 @@
+{
+  "messages": [
+    {
+      "name": "testing",
+      "email": "sawantraashi@gmail.com",
+      "message": "abcdefg hijlkmnop qrs tuv wx y and z ",
+      "id": "LN4VhdKIdYg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
