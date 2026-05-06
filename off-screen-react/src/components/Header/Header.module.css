@@ -1,0 +1,137 @@
+.navbar {
+  background-color: #2d5a3d;
+  color: #ffffff;
+  height: 120px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: height 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scrolled {
+  height: 90px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logoImg {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: height 0.3s ease;
+}
+
+.logoSmall {
+  height: 68px;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navLinks a:hover { color: #ffffff; }
+
+.active {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.authButtons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.quizLink {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: background 0.2s;
+}
+
+.quizLink:hover { background: rgba(255, 255, 255, 0.25); }
+
+.loginBtn {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.loginBtn:hover { background-color: rgba(255, 255, 255, 0.15); }
+
+.signupBtn {
+  background-color: #c8841a;
+  color: #ffffff;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.signupBtn:hover { background-color: #b57316; }
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 6px;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    background-color: #2d5a3d;
+    padding: 20px 30px;
+    gap: 16px;
+    z-index: 99;
+  }
+
+  .scrolled .navLinks {
+    top: 64px;
+  }
+
+  .navLinks.open { display: flex; }
+  .authButtons { display: none; }
+}
