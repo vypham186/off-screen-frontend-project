@@ -47,15 +47,30 @@ function Contact({ contactInfo = defaultContactInfo }: Props) {
     }
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+  
     const errs = validate();
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
-    setSubmitted(true);
-    setFormData(initial);
+  
+    try {
+      //This is where i'm adding the database
+      await fetch("http://localhost:5001/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+  
+      setSubmitted(true);
+      setFormData(initial);
+    } catch (error) {
+      console.error("Error sending message:", error);
+    }
   }
 
   return (
