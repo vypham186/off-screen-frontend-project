@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Contact.module.css';
 
 interface FormData {
   name: string;
   email: string;
   message: string;
+}
+
+interface Message extends FormData {
+  id: string;
 }
 
 interface ContactInfo {
@@ -30,6 +34,30 @@ function Contact({ contactInfo = defaultContactInfo }: Props) {
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [submitted, setSubmitted] = useState(false);
 
+  // Database retrieve state
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [loadingMessages, setLoadingMessages] = useState(false);
+  const [showMessages, setShowMessages] = useState(false);
+
+  // Fetch all messages from the database (GET)
+  async function fetchMessages() {
+    setLoadingMessages(true);
+    try {
+      const res = await fetch('http://localhost:5001/messages');
+      const data: Message[] = await res.json();
+      setMessages(data);
+    } catch (error) {
+      console.error('Error fetching messages:', error);
+    } finally {
+      setLoadingMessages(false);
+    }
+  }
+
+  // Load messages on mount
+  useEffect(() => {
+    fetchMessages();
+  }, []);
+
   function validate(): Partial<FormData> {
     const errs: Partial<FormData> = {};
     if (!formData.name.trim()) errs.name = 'Name is required.';
@@ -49,27 +77,28 @@ function Contact({ contactInfo = defaultContactInfo }: Props) {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-  
+
     const errs = validate();
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
-  
+
     try {
-      //This is where i'm adding the database
-      await fetch("http://localhost:5001/messages", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
+      // Insert new message into the database (POST)
+      await fetch('http://localhost:5001/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
-  
+
       setSubmitted(true);
       setFormData(initial);
+
+      // Refresh the messages list after inserting
+      await fetchMessages();
     } catch (error) {
-      console.error("Error sending message:", error);
+      console.error('Error sending message:', error);
     }
   }
 
@@ -182,11 +211,7 @@ function Contact({ contactInfo = defaultContactInfo }: Props) {
 
                 <div className={styles.field}>
                   <label htmlFor="subject">Subject</label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    className={styles.select}
-                  >
+                  <select id="subject" name="subject" className={styles.select}>
                     <option value="">Select a topic</option>
                     <option value="general">General Question</option>
                     <option value="hobby">Suggest a Hobby</option>
@@ -223,8 +248,46 @@ function Contact({ contactInfo = defaultContactInfo }: Props) {
 
         </div>
       </section>
+
+      {/* ── DATABASE RETRIEVE SECTION ── */}
+      <section className={styles.section}>
+        <div className={styles.messagesHeader}>
+          <h2>Submitted Messages</h2>
+          <button
+            className={styles.toggleBtn}
+            onClick={() => {
+              setShowMessages(prev => !prev);
+              if (!showMessages) fetchMessages();
+            }}
+          >
+            {showMessages ? 'Hide Messages' : `Show Messages (${messages.length})`}
+          </button>
+        </div>
+
+        {showMessages && (
+          <div className={styles.messagesList}>
+            {loadingMessages ? (
+              <p className={styles.loadingText}>Loading messages...</p>
+            ) : messages.length === 0 ? (
+              <p className={styles.emptyText}>No messages yet. Be the first to reach out!</p>
+            ) : (
+              messages.map(msg => (
+                <div key={msg.id} className={styles.messageCard}>
+                  <div className={styles.messageCardHeader}>
+                    <strong>{msg.name}</strong>
+                    <span className={styles.messageEmail}>{msg.email}</span>
+                  </div>
+                  <p className={styles.messageBody}>{msg.message}</p>
+                </div>
+              ))
+            )}
+          </div>
+        )}
+      </section>
     </main>
   );
 }
+
+export default Contact;
 
 export default Contact;
