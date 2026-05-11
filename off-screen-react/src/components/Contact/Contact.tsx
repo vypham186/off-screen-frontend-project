@@ -288,6 +288,6 @@ function Contact({ contactInfo = defaultContactInfo }: Props) {
   );
 }
 
-export default Contact;
+
 
 export default Contact;
